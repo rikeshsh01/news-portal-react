@@ -10,20 +10,21 @@ import {
 
 
 export class App extends Component {
+  pagesize = 15;
   render() {
     return (
       <div>
         <Router>
-        <NavBar/>
-        <Routes>
-          <Route key="general" path="/general"  element={<News pageSize = {9}  category= "general" country="us"/>}/>
-          <Route key="business" path="/business"  element={<News pageSize = {9} category= "business" country="us"/>}/>
-          <Route key="entertainment" path="/entertainment"  element={<News pageSize = {9} category= "entertainment" country="us"/>}/>
-          <Route key="sports" path="/sports"  element={<News pageSize = {9} category= "sports" country="us"/>}/>
-          <Route key="science" path="/science"  element={<News pageSize = {9} category= "science" country="us"/>}/>
-          <Route key="technology" path="/technology"  element={<News pageSize = {9} category= "technology" country="us"/>}/>
-          <Route key="health" path="/health"  element={<News pageSize = {9} category= "health" country="us"/>}/>
-        </Routes>
+          <NavBar />
+          <Routes>
+            <Route path="/general" element={<News key="1" pageSize={this.pagesize} category="general" country="us" />} />
+            <Route path="/business" element={<News key="2" pageSize={this.pagesize} category="business" country="us" />} />
+            <Route path="/entertainment" element={<News key="3" pageSize={this.pagesize} category="entertainment" country="us" />} />
+            <Route path="/sports" element={<News key="4" pageSize={this.pagesize} category="sports" country="us" />} />
+            <Route path="/science" element={<News key="5" pageSize={this.pagesize} category="science" country="us" />} />
+            <Route path="/technology" element={<News key="6" pageSize={this.pagesize} category="technology" country="us" />} />
+            <Route path="/health" element={<News key="7" pageSize={this.pagesize} category="health" country="us" />} />
+          </Routes>
         </Router>
       </div>
     )
