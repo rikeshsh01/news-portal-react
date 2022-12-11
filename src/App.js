@@ -10,7 +10,7 @@ import {
 
 
 export class App extends Component {
-  pagesize = 15;
+  pagesize = 5;
   render() {
     return (
       <div>
